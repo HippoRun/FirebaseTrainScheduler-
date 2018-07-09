@@ -1,0 +1,9 @@
+.panel-default>.panel-default{
+    background-color: pink;
+}
+
+.jombotron {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: grey;
+};
