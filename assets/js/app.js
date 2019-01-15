@@ -21,8 +21,8 @@ $(document).ready(function() {
         authDomain: "train-8254a.firebaseapp.com",
         databaseURL: "https://train-8254a.firebaseio.com",
         projectId: "train-8254a",
-        storageBucket: "train-8254a.appspot.com"
-        // messagingSenderId: "515446258222"
+        storageBucket: "train-8254a.appspot.com",
+        messagingSenderId: "515446258222"
     
           };
           firebase.initializeApp(config);
@@ -33,31 +33,28 @@ $(document).ready(function() {
     function calculateNextTrain(firstTrainTime, frequency){
         // First Time (push back 1 year to make sure it comes before current time)
     var firstTimeConverted = moment(firstTrainTime, "HH:mm").subtract(1, "years");
-    console.log(firstTimeConverted);
+    // console.log(firstTimeConverted);
 
     // Current Time
     var currentTime = moment();
-    console.log("CURRENT TIME: " + moment(currentTime).format("HH:mm"));
+    // console.log("CURRENT TIME: " + moment(currentTime).format("HH:mm"));
 
     // Difference between the times
     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
-    console.log("DIFFERENCE IN TIME: " + diffTime);
+    // console.log("DIFFERENCE IN TIME: " + diffTime);
 
     // Time apart (remainder)
     var tRemainder = diffTime % frequency;
-    console.log(rRemainder);
+    // console.log(rRemainder);
 
     // Minute Until Train
     var tMinutesTillTrain = frequency - tRemainder;
-    console.log(tRemainder);
+    // console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
-    //Minute Until Train
-    var tMinutesTillTrain = frequency - tRemainder;
-    console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
     // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-    console.log("ARRIVAL TIME: " + moment(nextTrain).format("HH:mm"));
+    // console.log("ARRIVAL TIME: " + moment(nextTrain).format("HH:mm"));
 
     return {
         time: moment(nextTrain).format("HH:mm"),
