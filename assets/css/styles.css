@@ -1,9 +1,42 @@
-.panel-default>.panel-default{
-    background-color: pink;
+body{
+    background-image: url("");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.jombotron {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: grey;
-};
+.form{
+    margin-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 0px;
+}
+
+h2{
+    background-color: black;
+    color: aliceblue;
+    padding: 3px;
+    text-align: center;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.display-4{
+    text-align: center;
+    color: aliceblue;
+}
+
+.jumbotron{
+    background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.marlboroughflyer.co.nz%2Fwp-content%2Fuploads%2F2018%2F03%2FPic.png&imgrefurl=https%3A%2F%2Fwww.marlboroughflyer.co.nz%2Ftrain-trips%2Fsteam-train-tour&docid=y-rNH0KcGyFeSM&tbnid=XtWoXPxeWIFTVM%3A&vet=10ahUKEwiUpq27tu7fAhWI2YMKHUdaB7sQMwh4KA0wDQ..i&w=1074&h=716&bih=452&biw=765&q=train&ved=0ahUKEwiUpq27tu7fAhWI2YMKHUdaB7sQMwh4KA0wDQ&iact=mrc&uact=8");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10px;
+    height: 200px;
+}
+
+.display-4{
+    font-weight: bolder;
+    font-size: 3em;
+}
